@@ -1,0 +1,22 @@
+id: T000060
+slug: corsi-block-tapping-task
+title: Corsi Block-Tapping Task
+acquisition: behavior
+variant: baseline
+cognitive_domain:
+  - working-memory
+  - visuospatial-memory
+  - spatial-sequence-recall
+maturity: draft
+version:
+  release_tag: v0.1.0
+contracts:
+  taps: v0.2.0
+runtime:
+  profile: psyflow
+evidence:
+  - https://doi.org/10.3389/fpsyg.2014.00939
+  - https://doi.org/10.3758/BF03202756
+  - https://doi.org/10.3758/BF03201189
+maintainer:
+  - TaskBeacon

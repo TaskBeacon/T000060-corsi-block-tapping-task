@@ -1,0 +1,83 @@
+subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints: {min: 101, max: 999, digits: 3}
+subinfo_mapping:
+  subject_id: 被试编号（3位数字）
+  Participant Information: 被试信息
+  registration_failed: 登记失败
+  registration_successful: 登记成功
+  invalid_input: "{field} 输入无效"
+window: {size: [1280, 800], units: pix, screen: 0, bg_color: black, fullscreen: false, monitor_width_cm: 35.5, monitor_distance_cm: 60}
+task:
+  task_name: Corsi Block-Tapping Task
+  save_path: ./outputs/sim
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+  total_blocks: 2
+  total_trials: 6
+  trial_per_block: 3
+  conditions: [forward, backward]
+  directions: [forward, backward]
+  direction_labels: {forward: 正序, backward: 倒序}
+  key_list: [space]
+  seed_mode: same_across_sub
+  overall_seed: 42060
+  sequence_seed: 60060
+  start_length: 2
+  max_length: 3
+  attempts_per_length: 2
+  correct_to_advance: 1
+  practice_trials_per_direction: 1
+  practice_sequence_length: 3
+  block_count: 9
+  response_mode: pointer
+  delta: 0.0
+  phase_order: [instruction, sequence_ready, sequence_flash, sequence_gap, recall, practice_feedback, trial_iti, block_summary, good_bye]
+timing: {sequence_ready_duration: 0.05, flash_duration: 0.05, flash_ioi: 0.10, recall_timeout: 1.5, feedback_duration: 0.05, iti_duration: 0.05}
+stimuli:
+  instruction_general: {type: text, font: SimHei, text: "九个方块会依次点亮。请记住位置和顺序，蓝点出现后依次点击。\n\n按空格键继续。", color: white, height: 28, wrapWidth: 980, pos: [0, 0]}
+  instruction_forward: {type: text, font: SimHei, text: "正序部分\n\n请按原顺序点击。\n\n按空格键开始练习。", color: white, height: 30, wrapWidth: 900, pos: [0, 0]}
+  instruction_backward: {type: text, font: SimHei, text: "倒序部分\n\n请按相反顺序点击。\n\n按空格键开始练习。", color: white, height: 30, wrapWidth: 900, pos: [0, 0]}
+  feedback_correct: {type: text, font: SimHei, text: 正确, color: lime, height: 44, pos: [0, 0]}
+  feedback_incorrect: {type: text, font: SimHei, text: 不正确, color: red, height: 44, pos: [0, 0]}
+  block_summary: {type: text, font: SimHei, text: "{direction_label}部分完成\n\n跨度：{span}\n\n按空格键继续。", color: white, height: 30, wrapWidth: 900, pos: [0, 0]}
+  good_bye: {type: text, font: SimHei, text: "任务完成\n\n正序跨度：{forward_span}\n倒序跨度：{backward_span}\n总正确率：{accuracy:.1%}\n未完成试次：{timeouts}\n\n按空格键退出。", color: white, height: 30, wrapWidth: 900, pos: [0, 0]}
+  blank: {type: text, font: SimHei, text: "", color: white, height: 1, pos: [0, 0]}
+  ready_marker: {type: circle, radius: 14, fillColor: deepskyblue, lineColor: deepskyblue, pos: [520, 320]}
+  block_1: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [-360, 190]}
+  block_2: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [-70, 260]}
+  block_3: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [290, 200]}
+  block_4: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [-460, -20]}
+  block_5: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [-130, 30]}
+  block_6: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [180, -20]}
+  block_7: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [420, -110]}
+  block_8: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [-330, -260]}
+  block_9: {type: rect, width: 90, height: 90, fillColor: black, lineColor: yellow, lineWidth: 4, pos: [50, -240]}
+  active_block_1: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [-360, 190]}
+  active_block_2: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [-70, 260]}
+  active_block_3: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [290, 200]}
+  active_block_4: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [-460, -20]}
+  active_block_5: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [-130, 30]}
+  active_block_6: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [180, -20]}
+  active_block_7: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [420, -110]}
+  active_block_8: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [-330, -260]}
+  active_block_9: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [50, -240]}
+triggers:
+  map: {experiment_start: 1, block_start: 10, sequence_ready: 20, sequence_flash: 21, recall_onset: 30, block_select: 31, recall_complete: 32, recall_timeout: 33, feedback_onset: 40, trial_iti: 50, block_end: 90, experiment_end: 99}
+  driver: {type: serial_url, url: "loop://", baudrate: 115200, timeout: 1}
+  policy: {strict: false}
+  timing: {post_delay_s: 0.001}
+sim:
+  output_dir: outputs/sim
+  seed: 42060
+  participant_id: sim001
+  session_id: sub-sim001_task-corsi-block-tapping_seed42060
+  log_path: outputs/sim/sub-sim001_task-corsi-block-tapping_seed42060_sim_events.jsonl
+  policy: warn
+  default_rt_s: 0.20
+  clamp_rt: false
+  responder:
+    type: scripted
+    kwargs: {key: block_1, rt_s: 0.20}

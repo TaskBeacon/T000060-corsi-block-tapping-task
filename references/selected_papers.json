@@ -1,0 +1,58 @@
+[
+  {
+    "id": "W2133111582",
+    "title": "eCorsi: implementation and testing of the Corsi block-tapping task for digital tablets",
+    "authors": ["Riccardo Brunetti", "Claudia Del Gatto", "Franco Delogu"],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.00939",
+    "citation_count": 126,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["canonical_computerized_protocol", "board_layout", "presentation_timing", "adaptive_span", "response_semantics", "scoring"],
+    "parameter_bindings": {},
+    "notes": "Primary protocol source. OpenAlex citation count checked 2026-07-12."
+  },
+  {
+    "id": "W2024648041",
+    "title": "Interference in immediate spatial memory",
+    "authors": ["Mary M. Smyth", "Keith A. Scholey"],
+    "year": 1994,
+    "journal": "Memory & Cognition",
+    "doi_or_url": "https://doi.org/10.3758/BF03202756",
+    "citation_count": 276,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["spatial_attention_construct", "computerized_spatial_sequence_support"],
+    "parameter_bindings": {},
+    "notes": "Supporting construct source; does not override eCorsi protocol parameters."
+  },
+  {
+    "id": "W1972939642",
+    "title": "Verbal and visuospatial short-term memory in children: Evidence for common and distinct mechanisms",
+    "authors": ["Susan J. Pickering", "Susan E. Gathercole", "Sarah Peaker"],
+    "year": 1998,
+    "journal": "Memory & Cognition",
+    "doi_or_url": "https://doi.org/10.3758/BF03201189",
+    "citation_count": 100,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["visuospatial_short_term_memory_construct", "span_interpretation"],
+    "parameter_bindings": {},
+    "notes": "Supporting construct source; does not override eCorsi protocol parameters."
+  },
+  {
+    "id": "W2165302691",
+    "title": "Evidence for a Two-Stage Model of Spatial Working Memory Processing within the Lateral Frontal Cortex: A Positron Emission Tomography Study",
+    "authors": ["Adrian M. Owen", "Alan C. Evans", "Michael Petrides"],
+    "year": 1996,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/6.1.31",
+    "citation_count": 754,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": ["high_impact_spatial_working_memory_construct"],
+    "parameter_bindings": {},
+    "notes": "High-impact construct source only; its distinct spatial working-memory tasks are not imported into Corsi trial logic."
+  }
+]
