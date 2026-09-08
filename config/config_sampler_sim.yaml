@@ -66,7 +66,7 @@ stimuli:
   active_block_9: {type: rect, width: 90, height: 90, fillColor: yellow, lineColor: yellow, lineWidth: 4, pos: [50, -240]}
 triggers:
   map: {experiment_start: 1, block_start: 10, sequence_ready: 20, sequence_flash: 21, recall_onset: 30, block_select: 31, recall_complete: 32, recall_timeout: 33, feedback_onset: 40, trial_iti: 50, block_end: 90, experiment_end: 99}
-  driver: {type: serial_url, url: "loop://", baudrate: 115200, timeout: 1}
+  driver: {type: mock, print_codes: true}
   policy: {strict: false}
   timing: {post_delay_s: 0.001}
 sim:
